@@ -1,2 +1,4 @@
-package CURRENCY;public class Converter {
+package CURRENCY;
+
+public class Converter {
 }
