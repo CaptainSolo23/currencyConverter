@@ -17,9 +17,6 @@ public class Main {
                 options,
                 "");
 
-        System.out.println("La respuesta fue: " + option );
-        System.out.println("La respuesta fue: " + options[option]);
-
         //Arrays and tools
         String [] currencyModes = {"From MXN","To MXN"};
         String [] currencyOptions = {"USD","EUR","CAN","GBP"};
@@ -43,7 +40,6 @@ public class Main {
                     null,
                     currencyModes,
                     "");
-            System.out.println("La respuesta fue: " + currencyModes[option]); // 0 fromMXN, 1 ToMXN
 
             if(currencyModes[option].equals(currencyModes[0]) ){ // From MXN to Foreign Currency
 
@@ -60,41 +56,36 @@ public class Main {
                             null, currencyOptions,
                             currencyOptions[0]);
 
-                    System.out.println(currOpt);
-
                     Converter.MxnToConverter mxnTo = new Converter.MxnToConverter(); //Initialize converter
 
 
                     switch (currOpt) {
                         case "USD":
-                            System.out.println("USD option selected. Perform action for USD.");
+
                             result = mxnTo.convert(amountToBeExchanged, Converter.USD_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " MXN equals: " + dFormat.format(result) + " USD");
-                            System.out.println(result);
+
                             break;
                         case "EUR":
-                            System.out.println("EUR option selected. Perform action for EUR.");
+
                             result = mxnTo.convert(amountToBeExchanged, Converter.EUR_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " MXN equals: " + dFormat.format(result) + " EUR");
-                            System.out.println(result);
+
                             break;
                         case "CAN":
-                            System.out.println("CAN option selected. Perform action for CAN.");
 
                             result = mxnTo.convert(amountToBeExchanged, Converter.CAN_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " MXN equals: " + dFormat.format(result) + " CAN");
-                            System.out.println(result);
+
                             break;
                         case "GBP":
-                            System.out.println("GBP option selected. Perform action for GBP.");
 
                             result = mxnTo.convert(amountToBeExchanged, Converter.GBP_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " MXN equals: " + dFormat.format(result) + " GBP");
-                            System.out.println(result);
                             break;
                         default:
                             JOptionPane.showMessageDialog(null,
@@ -124,41 +115,35 @@ public class Main {
                             null, currencyOptions,
                             currencyOptions[0]);
 
-                    System.out.println(currOpt);
-
                     Converter.ConvertToMxn toMxn = new Converter.ConvertToMxn(); // Initialize converter
 
                     switch (currOpt) {
                         case "USD":
-                            System.out.println("USD option selected. Perform action for USD.");
                             result = toMxn.convert(amountToBeExchanged, Converter.USD_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " USD equals: " + dFormat.format(result) + " MXN");
-                            System.out.println(result);
                             break;
                         case "EUR":
-                            System.out.println("EUR option selected. Perform action for EUR.");
 
                             result = toMxn.convert(amountToBeExchanged, Converter.EUR_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " EUR equals: " + dFormat.format(result) + " MXN");
-                            System.out.println(result);
+
                             break;
                         case "CAN":
-                            System.out.println("CAN option selected. Perform action for CAN.");
+
 
                             result = toMxn.convert(amountToBeExchanged, Converter.CAN_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " CAN equals: " + dFormat.format(result) + " MXN");
-                            System.out.println(result);
+
                             break;
                         case "GBP":
-                            System.out.println("GBP option selected. Perform action for GBP.");
 
                             result = toMxn.convert(amountToBeExchanged, Converter.GBP_RATE);
                             JOptionPane.showMessageDialog(null,
                                     amountToBeExchanged + " GBP equals: " + dFormat.format(result) + " MXN");
-                            System.out.println(result);
+
                             break;
                         default:
                             JOptionPane.showMessageDialog(null,
@@ -190,7 +175,7 @@ public class Main {
                     null,
                     tempModes,
                     "");
-            System.out.println("La respuesta fue: " + tempModes[option]); // 0 from C, 1 To C
+
 
             if(tempModes[option].equals(tempModes[0]) ){ // From C to F
 
@@ -224,7 +209,6 @@ public class Main {
                 null,
                 distModes,
                 "");
-        System.out.println("La respuesta fue: " + distModes[option]); // 0 from km to miles, 1 miles to km
 
         if(tempModes[option].equals(distModes[0]) ){ // km to miles
 
